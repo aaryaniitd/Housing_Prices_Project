@@ -14,7 +14,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 # We read data from csv file
-housing = pd.read_csv("C:\ML Practice\Project 1\data.csv")
+housing = pd.read_csv("https://github.com/aaryaniitd/Housing_Prices_Project/blob/main/data.csv")
 ### see the top 5 rows of data using head()
 ##print(housing.head())
 ### see the info of the data
