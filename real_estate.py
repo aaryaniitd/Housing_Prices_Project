@@ -9,16 +9,16 @@
 #rather than an auto updating set
 
 #We will use Root Mean Square Error for performance measure
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
+
 # We read data from csv file
 housing = pd.read_csv("https://github.com/aaryaniitd/Housing_Prices_Project/blob/main/data.csv")
-### see the top 5 rows of data using head()
-##print(housing.head())
-### see the info of the data
-##print(housing.info())
+
+## print(housing.info())
 ### see the number of times each value appears
 ##print(housing['Chas'].value_counts())
 ### to explain data
@@ -27,7 +27,7 @@ housing = pd.read_csv("https://github.com/aaryaniitd/Housing_Prices_Project/blob
 ##x.hist(housing,bins = 50)
 ##plt.show()
  
-#Train-Test Splitting 1 (for learning purpose only)
+# Train-Test Splitting 1 (for learning purpose only)
 ##def split_train_test(data, test_ratio):
 ##    np.random.seed(42)
 ##    shuffled = np.random.permutation(len(data))
@@ -42,7 +42,7 @@ housing = pd.read_csv("https://github.com/aaryaniitd/Housing_Prices_Project/blob
 # the test cases. So we use a seed generator, which keeps a randomly picked
 # set as fixed.
 
-                         #Train-Test Splitting 2
+                         # Train-Test Splitting 2
 from sklearn.model_selection import train_test_split, StratifiedShuffleSplit
 split = StratifiedShuffleSplit(n_splits = 1, test_size = 0.2, random_state = 42)
 for train_index, test_index in split.split(housing, housing['Chas']):
